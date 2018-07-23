@@ -1,0 +1,65 @@
+<include file="Home:header"/>
+{__NOLAYOUT__}
+
+<link href="{$demo_url}/css/news.css" type="text/css" rel="stylesheet" />
+<!--s-banner-->
+<div class="banner">
+    <div class="banner_con">
+        <div class="banner_con_t" style="background: url({$nnn_img}) no-repeat;"></div>
+        <div class="banner_con_b"></div>
+    </div>
+</div>
+<!--e-banner-->
+<!--s-zhengti-->
+<div class="zhengti">
+    <div class="zhengti_con">
+
+        <include file="Home:left"/>
+
+        <div class="zhengti_con_r">
+            <include file="Home:nav"/>
+
+
+            <volist name="list" id="r" empty="$em" key="k" >
+                {if $k==1}
+            <div class="z_n_li">
+                <div class="z_n_li_l"><a href="{$r.url}"><img src="{$r.thumb|thumb=###,225,145,1}" width="225" height="145" /></a></div>
+                <div class="z_n_li_r"><h3><a href="{$r.url}">{$r.title|str_cut=###,74}</a></h3>
+                    <p class="riqi">{$r.createtime|toDate=###,'Y-m-d'}</p>
+                    <p class="wz"><a href="{$r.url}">{$r.description|str_cut=###,200}</a></p>
+                </div>
+            </div>
+                {else}
+                <div class="z_n_li_1">
+                    <h3><a href="{$r.url}">{$r.title|str_cut=###,74}</a><span>{$r.createtime|toDate=###,'Y-m-d'}</span></h3>
+                    <p class="wz2"><a href="{$r.url}"><span>概要：</span>{$r.description|str_cut=###,200}</a></p>
+                </div>
+{/if}
+            </volist>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="diggg">{$pages}</div>
+
+        </div><div style="clear: both;">
+    </div>
+    <div style="clear: both;">
+</div>
+<!--s-zhengti-->
+
+
+<include file="Home:footer"/>

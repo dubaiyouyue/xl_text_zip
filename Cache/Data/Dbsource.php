@@ -1,0 +1,1 @@
+<?php	return array ( 'xhy' => array ( 'id' => '1', 'name' => 'xhy', 'host' => 'localhost', 'port' => '3306', 'username' => 'root', 'password' => 'root', 'dbname' => 'xhy', 'dbtablepre' => 'gz_', ), );?>

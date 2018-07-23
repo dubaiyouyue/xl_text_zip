@@ -1,0 +1,62 @@
+<include file="Home:header"/>
+{__NOLAYOUT__}
+
+<link href="{$demo_url}/css/yqljj.css" type="text/css" rel="stylesheet">
+<style>.yq_l ul li{
+    float: left;}
+.youqing{height: auto;}
+.yq_l{height: auto}
+</style>
+<!--s-banner-->
+<div class="banner">
+    <div class="banner_con">
+        <div class="banner_con_t" style="background: url({$nnn_img}) no-repeat;"></div>
+        <div class="banner_con_b"></div>
+    </div>
+</div>
+<!--e-banner-->
+<!--s-zhengti-->
+<div class="zhengti">
+    <div class="zhengti_con">
+
+        <div class="zhengti_con_l">
+            <div class="z_c_l_t">
+                <div class="z_c_l_tt"><p>友情链接&nbsp;<span>/&nbsp;NEWS</span></p></div>
+                <div class="z_c_l_tb">
+                    <ul>
+                        <li class="action"><a href="/index.php/yqljj/">友情链接</a></li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="zhengti_con_r">
+            <include file="Home:nav"/>
+
+
+
+            <div class="hzjm">
+                <div class="youqing">
+                    <div class="yq_l" style="width: 100%;">
+                        <ul style="width: 100%;">
+                            <GZ:link status="1" limit="5" >
+                                <?php //dump($r);?>
+                                <li><a href="{$r['siteurl']}" target="_blank">{$r['name']}</a></li>
+                            </GZ:link>
+                        </ul>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div><div style="clear: both;">
+    </div>
+        <div style="clear: both;">
+        </div>
+        <!--s-zhengti-->
+
+
+        <include file="Home:footer"/>

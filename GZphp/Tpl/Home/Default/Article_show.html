@@ -1,0 +1,54 @@
+<include file="Home:header"/>
+{__NOLAYOUT__}
+
+<link href="{$demo_url}/css/nry.css" type="text/css" rel="stylesheet">
+<!--s-banner-->
+<div class="banner">
+    <div class="banner_con">
+        <div class="banner_con_t" style="background: url({$nnn_img}) no-repeat;"></div>
+        <div class="banner_con_b"></div>
+    </div>
+</div>
+<!--e-banner-->
+<!--s-zhengti-->
+<div class="zhengti">
+    <div class="zhengti_con">
+
+        <include file="Home:left"/>
+
+        <div class="zhengti_con_r">
+            <include file="Home:nav"/>
+
+
+<div class="hzjm">
+    <div class="hzjm_t" style="border-bottom: none;">
+        <h3>{$title}</h3>
+        <p><span>发布者：管理员</span>&nbsp;&nbsp;<span>发布时间：{$createtime|toDate=###,'Y-m-d'}</span>&nbsp;&nbsp;<span>浏览次数{$hits}</span></p>
+    </div>
+
+    <div class="hzjm_b">
+      {$content}
+    </div>
+
+
+
+    <div class="sxp">
+        <P>上一篇：{if $pre}<a href="{$pre[url]}">{$pre[title]}</a>{else}没有上一篇了{/if}</P>
+        <P>下一篇：{if $next}<a href="{$next[url]}">{$next[title]}</a>{else}没有下一篇了{/if}</P>
+    </div>
+</div>
+
+
+
+
+
+
+
+        </div><div style="clear: both;">
+    </div>
+        <div style="clear: both;">
+        </div>
+        <!--s-zhengti-->
+
+
+        <include file="Home:footer"/>

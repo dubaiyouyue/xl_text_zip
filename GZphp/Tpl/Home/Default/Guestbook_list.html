@@ -1,0 +1,88 @@
+  <!---------内容框---------->
+  <load href="__PUBLIC__/Js/jquery.validate.js"/>
+<div id="Tab1">
+
+<include file="Home:left"/>
+
+
+ <div id="Contentbox" >
+   <div id="con_one_1" class="hover">
+   <div tabindex="5000"  id="sucai">
+
+
+   <div id="con_one_2">
+   <div tabindex="5000"  id="sucai">
+          <div class="ffyh fs14 mb20 fchuang">感谢您对宏越钢结构工程的关注，请在下方留下您需要咨询的问题，我们的工作人员会尽快与您取得联系！</div>
+          <div class="fs14 fclan ">发表留言</div>
+     <form name="myform" id="guestbookform" method="POST" action="{:URL('User-Post/insert')}">     
+          <div id="liuyan">
+
+
+                    <input type="hidden"  name="catid" value="{$catid}" />
+                    <input type="hidden"  name="moduleid" value="{$moduleid}" />
+                    <input type="hidden"  name="lang" value="{$langid}" />
+
+<volist name="fields" id="r" key="n">
+
+  <if condition="!empty($r['status']) && $r['ispost']">
+<if condition="$r['type'] == 'text'">
+
+  <div id="liuyan_wz">{$r.name}：</div>
+
+  <div id="table">
+    {$r|getform=$form,###}
+    
+  </div>
+  
+<elseif condition="$r['type'] == 'textarea'" />
+
+  <div id="liuyan_wz">{$r.name}：</div>
+  <div id="table">
+   {$r|getform=$form,###}
+  </div>
+
+  </if>
+  </if>
+   </volist>
+  </div>
+
+ 
+
+  
+  <div id="liuyan">
+ 
+
+ 
+  <div class="anniu">
+    <ul>
+  <li><input type="submit" value="{:L(dosubmit)}" name="input" style="  width:70px; height:30px; border:1px solid #00A551; background-color:#00A551; color:#fff;" /></li>
+  <li><input type="button" value="取 消" style="  width:70px; height:30px; border:1px solid #ccc; background-color:#e5e5e5" /></li>
+  </ul>
+    
+  </div>
+  </div>
+
+  </form>    
+
+       <volist name="list" id="vo"  limit ="5"> 
+      
+        <div class="fs16 mt15 fclv ffyh">访客留言：{$vo.username}</div>
+        <Div class="fs14 ffyh mt15 lh27"><span class="fc000">咨询主题：</span>{$vo.title}</Div>
+        <Div class="fs14 ffyh lh27"><span class="fc000">咨询时间：</span>{$vo.title}</Div>
+        <Div class="fs14 ffyh lh27"><span class="fc000">咨询内容：</span>{$vo.content}</Div>
+        <Div class="fs14 ffyh lh27 pb5 bbdcc"><span class="fc000">咨询回复：</span>{$vo.reply_content}</Div>
+       </volist>
+        
+   </div>
+   </div>
+
+
+</div>
+     
+   </div>
+   <div id="con_one_2" style="display:none">新闻列表2</div>
+   <div id="con_one_3" style="display:none">新闻列表2</div>
+   <div id="con_one_4" style="display:none">新闻列表2</div>
+ </div>
+</div>
+    <!---------内容框---------->

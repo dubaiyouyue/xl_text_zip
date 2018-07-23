@@ -1,0 +1,97 @@
+﻿body,ul,li,form{margin:0px; padding:0px;}
+.index-main {
+	z-index:0;
+	position:relative;
+	width:1200px;
+	margin:0 auto;
+	height:469px;
+}
+.index-main-box {
+	position:relative;
+	 
+	display:block;
+	overflow:hidden;
+	height:469px;
+}
+#indexslider {
+	position:relative;
+	width:1200px;
+	left:360px;
+	margin-left:-360px;
+	height:469px;
+}
+.index-img {
+	display:block;
+	width:1200px;
+	height:469px;
+	overflow:hidden;
+}
+.index-img img {
+	width:1200px;
+	height:469px;
+}
+.index-pagination {
+	position:absolute;
+	z-index:0;
+	top:440px;
+	left:50%;
+	height:30px;
+	width:210px;
+	margin-left:-51px;
+	text-align:center;
+}
+.index-pagination li {
+	display:inline-block;
+	width:30px;
+	position:relative;
+	float:left;
+	height:23px;
+	margin-right:4px;
+	overflow:hidden;
+	background:url(../images/index-ar2r.png) -20px 0px no-repeat;
+}
+.index-pagination li a {
+	position:relative;
+	z-index:0;
+	display:block;
+	padding:16px 0px 5px 0px;
+	height:5px;
+	color:#5f6a72;
+	text-align:center;
+}
+.index-pagination li a div {
+	position:relative;
+	z-index:0;
+	display:block;
+	height:5px;
+	background:#c9242b;
+}
+.index-pagination li a div span {
+	position:absolute;
+	top:0px;
+	left:0px;
+	height:5px;
+	width:0px;
+	background:#FFF;
+}
+.index-pagination li a div em {
+	position:absolute;
+	display:none;
+	width:27px;
+	height:10px;
+	background:url(../images/car-ico.png) no-repeat;
+	top:-5px;
+	left:360px;
+}
+.index-pagination li.current a {
+	color:#0b4da2;
+	_color:#c9242b;
+}
+.index-pagination li.back {background:url(../images/car-ico.png) no-repeat; display:block; position:absolute; width:27px; height:10px; left:0px; top:4px; z-index:0;}
+/*--------------------------------------------------------------*/
+/*--------------------------------------------------------------*/
+
+
+
+
+

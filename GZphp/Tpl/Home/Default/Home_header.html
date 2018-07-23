@@ -1,0 +1,93 @@
+<?php
+$demo_url='/GZphp/Tpl/Home/Default/Public';
+?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>{$seo_title}</title>
+    <meta name="keywords" content="{$seo_keywords}">
+    <meta name="description" content="{$seo_description}">
+    <script type="text/javascript" src="{$demo_url}/jquery/jquery-1.5.2.min.js" ignoreapd="1"></script>
+    <script type="text/javascript" src="{$demo_url}/jquery/jquery.easing.1.3.js" ignoreapd="1"></script>
+    <script type="text/javascript" src="{$demo_url}/jquery/slides.jquery.js" ignoreapd="1"></script>
+    <script type="text/javascript" src="{$demo_url}/jquery/index.js" ignoreapd="1"></script>
+<style>
+    /*------------------翻页代码----*/
+    div.diggg { text-align: center; clear:both; padding-top: 45px; padding-right: 0; padding-bottom: 15px; padding-left: 0; font-size:12px; }
+    div.diggg a { padding:5px 10px; border: #ccc 1px solid; margin: 3px; color: #000; background-color:#F8F9F4; }
+    div.diggg a:hover { padding:5px 10px; border:#2480bd 1px solid; }
+    div.diggg a:active { border: #016db1 1px solid; color: #000; }
+    div.diggg span.current { padding:5px 10px; margin: 3px; color: #fff; background-color:#8e1927; }
+    div.diggg span.disabled { border: #ccc 1px solid; margin: 3px; color: #bbb; padding:5px 10px; background-color:#fff; }
+
+</style>
+</head>
+
+<body>
+<!--s-huanying-->
+<div class="huangying">
+    <div class="hy_con">
+        <div class="hy_con_l">
+            <p>{$xl_yyh}</p>
+        </div>
+        <div class="hy_con_r">
+            <ul>
+                <li><img src="{$demo_url}/images/dianhua.fw.png" width="12" height="11" />{$wen_tel}<span>|</span></li>
+                <li><img src="{$demo_url}/images/youjian.fw.png" width="14" height="10" />{$site_email}</li>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--e-huanying-->
+<!--s-naver-->
+
+<!--栏目导航-->
+<?php
+$v_o=array();
+$v_t=array();
+ foreach($Categorys as $k=>$v){
+if($v['ismenu']){
+if(!$v['parentid']) $v_o[$k]=$v; //一级
+else $v_t[$v['parentid']][]=$v;//二级栏目
+}
+}
+//dump($Categorys);
+?>
+
+
+<div class="naver">
+    <div class="naver_con">
+        <div class="naver_con_l"></div>
+        <div class="naver_con_r">
+            <ul>
+                <li class="<?php if($catid==0) echo 'xuand';?>"><a href="{$site_url}">首&nbsp;&nbsp;页</a></li>
+                <?php
+                foreach($v_o as $k=>$v){
+                $vcssid='';
+                    if($v['id']==$catid || $v['id']==$Categorys[$catid]['parentid']) $vcssid='xuand';
+                    echo' <li class="'.$vcssid.'"><a href="'.$v['url'].'">'.$v['catname'].'</a></li>';
+                }
+                ?>
+            </ul>
+        </div>
+    </div>
+</div>
+<!--e-naver-->
+
+
+
+<?php //dump($Categorys);
+//$catid=11;
+    $nnn_img=$Categorys[$catid]['image'];
+    $nnn_scatname=$Categorys[$catid]['catname'];
+    $nnn_spid=$Categorys[$catid]['parentid'];
+
+    if($nnn_spid) {
+        //子栏目
+        $nnn_img=$Categorys[$Categorys[$catid]['parentid']]['image'];
+        $nnn_catname=$Categorys[$Categorys[$catid]['parentid']]['catname'];
+        }
+        else $nnn_spid=$catid;
+        $nnn_en=array('11'=>'PROFIlE');
+?>

@@ -1,0 +1,89 @@
+<include file="Home:header"/>
+{__NOLAYOUT__}
+
+<link href="{$demo_url}/css/yrbj.css" type="text/css" rel="stylesheet">
+
+<style>
+.jsfc_cn1_b p a{
+height: 40px;
+line-height: 40px;
+color: #000;
+font-size: 14px;
+    text-decoration: none;
+}
+</style>
+
+
+
+
+<!--s-banner-->
+<div class="banner">
+    <div class="banner_con">
+        <div class="banner_con_t" style="background: url({$nnn_img}) no-repeat;"></div>
+        <div class="banner_con_b"></div>
+    </div>
+</div>
+<!--e-banner-->
+<!--s-zhengti-->
+<div class="zhengti">
+    <div class="zhengti_con">
+
+        <include file="Home:left"/>
+
+        <div class="zhengti_con_r">
+            <include file="Home:nav"/>
+
+
+
+
+
+
+
+
+            <div class="jsfc">
+                <div class="jsfc_cn">
+
+
+                    <volist name="list" id="r" empty="$em" key="k">
+
+
+                        <div class="yysp_con_1" style="  margin-bottom: 30px; <?php if($k%3!=0)  echo'margin-right: 23px;';?>">
+                            <div class="yysp_con_1t"><a href="{$r.url}"><img src="{$r.thumb|thumb=###,281,179,1}" width="281" height="179"></a></div>
+                            <div class="yysp_con_1b"><p>{$r.title}一<span>{$r.createtime|toDate=###,'Y-m-d'}</span></p></div>
+                        </div>
+
+                    </volist>
+
+
+
+
+
+
+
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+                <div class="diggg">{$pages}</div>
+
+        </div><div style="clear: both;">
+    </div>
+    <div style="clear: both;">
+</div>
+<!--s-zhengti-->
+
+
+<include file="Home:footer"/>

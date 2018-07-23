@@ -1,0 +1,51 @@
+
+<div class="zhengti_con_l">
+   <div class="z_c_l_t">
+      <div class="z_c_l_tt"><p>{$catname}&nbsp;<span>/&nbsp;
+
+
+         <?php
+            foreach($Categorys as $k=>$v){
+            if($Categorys[$v['id']]['parentid']==$nnn_spid) {
+
+            if($v['id']==$catid) echo $ddddss=$v['title'];
+            }
+            }
+         if(!$ddddss) echo $Categorys[$catid]['title'];
+            ?>
+
+
+      </span></p></div>
+      <div class="z_c_l_tb">
+         <ul>
+
+            <?php
+            //dump($Categorys[$nnn_spid]);
+            foreach($Categorys as $k=>$v){
+            if($Categorys[$v['id']]['parentid']==$nnn_spid) {
+            echo '<li  class="';
+            if($v['id']==$catid) echo 'action';
+            echo'"><a href="'.$v['url'];
+                echo '">'.$v['catname'].'</a></li>';
+            $ddddssess=$v['catname'];
+            }
+            }
+            if(!$ddddssess) echo '<li class="action"><a href="'.$url.'">'.$Categorys[$catid]['catname'].'</a></li>';
+            ?>
+         </ul>
+      </div>
+
+   </div>
+   <div class="z_c_l_b">
+
+      <GZ:list sql="select * from gz_slide_data where fid = '2' and status = '1' and lang = '1' " limit="1">
+         <div class="z_c_l_bt"><a href="{$r.link}"><img src="{$r.small}" width="240" height="93" /></a></div>
+         <div class="z_c_l_bb"><p><a href="{$r.link}">联系我们&nbsp;<span>CONTACT&nbsp; US</span><img src="{$demo_url}/images/lxnext.png" width="13" height="13" /></a></p>
+      </GZ:list>
+
+
+      </div>
+   </div>
+</div>
+
+

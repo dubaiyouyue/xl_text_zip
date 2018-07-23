@@ -1,0 +1,29 @@
+   <!---------内容框---------->
+<div id="Tab1">
+<div class="Menubox">
+<ul>
+   <li id="one1" onclick="setTab('one',1,1)"  class="hover">解决方案</li>
+</ul>
+</div>
+ <div id="Contentbox">
+   <div id="con_one_1" class="hover">
+     <div tabindex="5000"  id="sucai">
+
+ 
+   
+      <volist name="list" id="vo"> 
+     <div class="news_list">
+       <div class="news_list_title fs14 fc000 "><a href="{$vo.url}">{$vo.title} </a></div>
+       <div class="news_list_cn"><span class="fczang">概要：</span><a href="{$vo.url}"> {$vo.description} </a></div>
+       </div>
+    </volist>
+ 
+
+
+     <div class="manu">{$pages}</div>
+     </div>
+      </div>
+</div>
+
+</div>
+    <!---------内容框---------->

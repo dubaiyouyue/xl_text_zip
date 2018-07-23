@@ -1,0 +1,177 @@
+<include file="Home:header"/>
+<link href="{$demo_url}/css/indexcss.css" type="text/css" rel="stylesheet" />
+<link type="text/css" rel="stylesheet" href="{$demo_url}/css/style2.css" ignoreapd="1" />
+<script src="{$demo_url}/js/xuanxkajs.js" type="text/javascript"></script>
+{__NOLAYOUT__}
+<!--s-banner-->
+
+
+<?php $where='thumb!=\'\'';?>
+
+<div class="banner">
+    <div class="banner_con">
+        <div class="index-main-box">
+            <div class="index-main">
+                <div id="indexslider">
+                    <div class="index-img">
+                        <GZ:list sql="select * from gz_slide_data where fid = '1' and status = '1' and lang = '1' ">
+                            <a href="{$r.link}" target="_blank"><img src="{$r.pic}" width="1200" height="469" /></a>
+                        </GZ:list>
+
+                    </div>
+                    <ul class="index-pagination">
+                        <GZ:list sql="select * from gz_slide_data where fid = '1' and status = '1' and lang = '1' ">
+                            <li><a><div><span></span></div></a></li>
+                        </GZ:list>
+
+                        <li class="back"></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div style="text-align:center;margin:10px 0; font:normal 14px/24px 'MicroSoft YaHei';">
+        </div>
+    </div>
+</div>
+<!--e-banner-->
+<!--s-banner-bottom-->
+<div class="banner_b">
+    <div class="banner_b_con"></div>
+</div>
+<!--e-banner-bottom-->
+<!--s-bankuaizhuanqu-->
+<div class="bkzq">
+    <div class="bkzq_con">
+        <ul>
+
+
+
+            <GZ:list sql="select * from gz_slide_data where fid = '4' and status = '1' and lang = '1' " key="k">
+                <li><a href="{$r.link}"><img src="{$r.small}" width="294" height="210" {if $k!=4}style="margin-right:8px;"{/if}></a></li>
+            </GZ:list>
+
+        </ul>
+    </div>
+</div>
+<!--s-bankuaizhuanqu-->
+<!--s-neirongsibankuai-->
+<div class="nrsbk">
+    <div class="nrsbk_con">
+        <div class="nrsbk_con1">
+            <div class="nrsbk_con1_t">
+                <div class="n_c_l"><p>通知公告</p></div>
+                <div class="n_c_r"><p><a href="/index.php/tzgg/">查看更多>></a></p></div>
+            </div>
+            <div class="nrsbk_con1_b">
+                <div class="n_c_b_t">
+
+                    <GZ:list sql="select * from gz_slide_data where fid = '5' and status = '1' and lang = '1' limit 1">
+                        <a href="{$r.link}"><img src="{$r.small}" width="278" height="102" /></a>
+                    </GZ:list>
+
+
+                </div>
+                <div class="n_c_b_b">
+                    <ul>
+
+
+                        <GZ:list catid="27" limit="6"><!-- posid="1"-->
+                            <li><a href="{$r.url}" title="{$r.title}">{$r.title|str_cut=###,30}</a><span>{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+                        </GZ:list>
+
+
+
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="nrsbk_con2">
+            <div class="nrsbk_con1_t">
+                <div class="n_c_l"><p>幼教动态</p></div>
+                <div class="n_c_r"><p><a href="/index.php/xhdt/">查看更多>></a></p></div>
+            </div>
+            <div class="nrsbk_con1_b">
+                <div class="n_c_b_t">
+
+                    <GZ:list sql="select * from gz_slide_data where fid = '5' and status = '1' and lang = '1' limit 1,1">
+                        <a href="{$r.link}"><img src="{$r.small}" width="278" height="102" /></a>
+                    </GZ:list>
+
+
+                </div>
+                <div class="n_c_b_b">
+                    <ul>
+                        <GZ:list catid="28" limit="6"><!-- posid="1"-->
+                            <li><a href="{$r.url}" title="{$r.title}">{$r.title|str_cut=###,30}</a><span>{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+                        </GZ:list>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nrsbk_con3">
+            <div class="nrsbk_con1_t">
+                <div class="n_c_l"><p>分园新闻</p></div>
+                <div class="n_c_r"><p><a href="/index.php/fyxw/">查看更多>></a></p></div>
+            </div>
+            <div class="nrsbk_con1_b">
+                <div class="n_c_b_t">
+
+                    <GZ:list sql="select * from gz_slide_data where fid = '5' and status = '1' and lang = '1' limit 2,1">
+                        <a href="{$r.link}"><img src="{$r.small}" width="278" height="102" /></a>
+                    </GZ:list>
+
+
+                </div>
+                <div class="n_c_b_b">
+                    <ul>
+                        <GZ:list catid="29" limit="6"><!-- posid="1"-->
+                            <li><a href="{$r.url}" title="{$r.title}">{$r.title|str_cut=###,30}</a><span>{$r.createtime|toDate=###,'Y-m-d'}</span></li>
+                        </GZ:list>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="nrsbk_con4">
+            <div class="nrsbk_con1_t">
+                <div class="n_c_l"><p>专家互动</p></div>
+                <div class="n_c_r"><p><a href="http://xh.com/index.php/zjhddddd/">查看更多>></a></p></div>
+            </div>
+            <div class="nrsbk_con1_b">
+                <GZ:list sql="select * from gz_slide_data where fid = '5' and status = '1' and lang = '1' limit 3,1">
+                    <a href="{$r.link}"><img src="{$r.small}" width="278" height="102" /></a>
+                </GZ:list>
+                <div id="one">
+                    <ul>
+                        <li class="action">学术探索</li>
+                        <li>育儿专区</li>
+                    </ul>
+                    <div style="display:block;">
+                        <dl>
+                            <dt><span>留言标题：</span>热烈祝贺新华幼教官网上线</dt>
+                            <dd><span>留言内容：</span>热烈祝贺新华幼教官网上线！新华在广西有多少家分园？具体地址在哪里呢？</dd>
+                        </dl>
+                        <dl style="border-bottom:none;">
+                            <dt><span>留言标题：</span>热烈祝贺新华幼教官网上线</dt>
+                            <dd><span>留言内容：</span>热烈祝贺新华幼教官网上线！新华在广西有多少家分园？具体地址在哪里呢？</dd>
+                        </dl>
+                    </div>
+
+                    <div>
+                        <dl>
+                            <dt><span>留言标题：</span>热烈祝贺新华幼教官网上线</dt>
+                            <dd><span>留言内容：</span>热烈祝贺新华幼教官网上线！新华在广西有多少家分园？具体地址在哪里呢？</dd>
+                        </dl>
+                        <dl style="border-bottom:none;">
+                            <dt><span>留言标题：</span>热烈祝贺新华幼教官网上线</dt>
+                            <dd><span>留言内容：</span>热烈祝贺新华幼教官网上线！新华在广西有多少家分园？具体地址在哪里呢？</dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--s-neirongsibankuai-->
+
+<include file="Home:footer"/>

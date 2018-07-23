@@ -1,0 +1,29 @@
+    <!---------内容框---------->
+<div id="Tab1">
+<div class="Menubox">
+<ul>
+   <li id="one1" onclick="setTab('one',1,1)"  class="hover">企业资质</li>
+  
+</ul>
+</div>
+ <div id="Contentbox">
+   <div id="con_one_1" class="hover">
+     <div tabindex="5000"  id="sucai">
+
+
+<GZ:list order="id desc" catid="15" limit="6">
+
+     <div class="zizhi_cn"><a href="{$r.url}">
+       <div class="zizhi_pic"><img src="{$r.thumb}" width="205" height="130" /></div>
+       <div class="zizhi_zi">{$r.title}</div></a>
+     </div>
+</GZ:list>
+
+     
+     <div class="manu">{$pages}</div>
+     
+   </div>
+   </div>
+ </div>
+</div>
+    <!---------内容框---------->
